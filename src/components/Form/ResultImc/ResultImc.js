@@ -13,20 +13,16 @@ export default function ResultImc(props) {
     return (
         <View style={styles.resultImc}>
             <View style={styles.boxShareButton}>
-                {props.resultImc !== null ?
-                    <TouchableOpacity 
+                <Text style={styles.informationText}>{props.messageResultImc}</Text>
+                <Text style={styles.numberImc}>{props.resultImc}</Text>
+                <TouchableOpacity
                     onPress={() => onShare()}
                     style={styles.shared}
-                    >
-                        <Text style={styles.sharedText}>Share</Text>
-                    </TouchableOpacity>
-                    :
-                    <View />
-                }
+                >
+                    <Text style={styles.sharedText}>Share</Text>
+                </TouchableOpacity>
+                <View />
             </View>
-            <Text style={styles.informationText}>{props.messageResultImc}</Text>
-            <Text style={styles.numberImc}>{props.resultImc}</Text>
-            <Text style={styles.classificationText}>{props.classification}</Text>
         </View>
     )
 }
